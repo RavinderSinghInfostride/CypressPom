@@ -31,7 +31,7 @@ class CartPage {
     }
 
     verifyOrderConfirm() {
-        cy.xpath(this.orderConfirmVerify).should('have.text','Thank you for your purchase!')
+        cy.xpath(this.orderConfirmVerify).should('have.text', 'Thank you for your purchase!')
         cy.xpath(this.orderOkButton).click()
     }
 }
