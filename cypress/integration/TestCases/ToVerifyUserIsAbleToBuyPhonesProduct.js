@@ -14,4 +14,5 @@ it("Add product to cart and checkout", () => {
     cartPage.placeOrder()
     cartPage.fillOrderDetails()
     cartPage.verifyOrderConfirm()
+    cy.screenshot()
 })

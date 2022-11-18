@@ -4,5 +4,6 @@ it('Put request', () => {
         url: 'https://reqres.in/api/users/2'
     }).then(function (response) {
         expect(response.status).to.eq(200)
+        cy.screenshot()
     })
 })
