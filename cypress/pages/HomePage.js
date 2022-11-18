@@ -29,6 +29,7 @@ class HomePage {
     contactNameInputBox = "//label[contains(text(),'Contact Name:')]//following::input[1]"
     contactMessageInputBox = "//label[contains(text(),'Message:')]//following::textarea"
     contactSendMessageButton = "//button[contains(text(),'Send message')]"
+    phonesProduct = "//a[contains(text(),'Samsung galaxy s7')]"
 
     userSignUp() {
         cy.xpath(this.signUpLink).click()
@@ -65,6 +66,11 @@ class HomePage {
         cy.xpath(this.contactNameInputBox).type(contactTestData.name)
         cy.xpath(this.contactMessageInputBox).type(contactTestData.message)
         cy.xpath(this.contactSendMessageButton).click()
+    }
+
+    navigateToPhonesProductDescriptionPage() {
+        cy.xpath(this.phonesProduct).click()
+        cy.url().should('include', 'prod.html?idp_=4')
     }
 }
 export default HomePage
